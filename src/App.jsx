@@ -69,6 +69,25 @@ export default function App() {
 
   <div className="relative max-w-4xl mx-auto text-center">
 
+{/* HERO LOGO */}
+<div className="flex justify-center mb-8 md:mb-10">
+  <img
+    src="/logo.png"
+    alt="Business Junction Logo"
+    className="
+      h-auto
+      w-[65%]          /* MOBILE – unchanged */
+      sm:w-[60%]       /* LARGE MOBILE – unchanged */
+      md:w-[420px]     /* DESKTOP – REDUCED */
+      lg:w-[480px]     /* LARGE DESKTOP – REDUCED */
+      object-contain
+      drop-shadow-xl
+    "
+  />
+</div>
+
+
+
     {/* badge */}
     <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur mb-10 text-sm font-semibold text-white/80">
       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -232,7 +251,7 @@ export default function App() {
         {/* Overlay CTA (PULSE + LIVE EFFECT) */}
         <button
           onClick={() => {
-            trackLead();
+            trackLead();    //pixel fires here
             setShowForm(true);
           }}
           className="
